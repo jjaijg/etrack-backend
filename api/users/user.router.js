@@ -3,13 +3,16 @@ const {
   getUserById,
   getUsers,
   deleteUser,
-} = require("./user.controller");
-const router = require("express").Router();
+  login,
+} = require('./user.controller');
+const router = require('express').Router();
+const { checkToken } = require('../../auth/token_validation');
 
-router.get("/", getUsers);
-router.get("/:id", getUserById);
-router.post("/", createUser);
+router.get('/', checkToken, getUsers);
+router.get('/profile', checkToken, getUserById);
+router.post('/', createUser);
 // router.patch("/", createUser);
-router.delete("/", deleteUser);
+router.delete('/', checkToken, deleteUser);
+router.post('/login', login);
 
 module.exports = router;

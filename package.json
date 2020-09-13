@@ -1,7 +1,6 @@
 {
-  "name": "expapp",
+  "name": "c",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
@@ -11,9 +10,20 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjaijg/nodeexpapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jjaijg/nodeexpapp/issues"
+  },
+  "homepage": "https://github.com/jjaijg/nodeexpapp#readme",
+  "description": ""
 }

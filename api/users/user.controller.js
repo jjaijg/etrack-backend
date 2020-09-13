@@ -1,4 +1,5 @@
-const { genSaltSync, hashSync, compareSync } = require("bcryptjs");
+const { genSaltSync, hashSync, compareSync } = require('bcryptjs');
+const { sign } = require('jsonwebtoken');
 
 const {
   create,
@@ -7,30 +8,31 @@ const {
   updateUser,
   deleteUser,
   getUserByEmail,
-} = require("./user.service");
+} = require('./user.service');
 
 module.exports = {
   createUser: (req, res) => {
     const body = req.body;
     const salt = genSaltSync(10);
     body.password = hashSync(body.password, salt);
-
+    console.log(body.password);
     create(body, (err, results) => {
       if (err) {
         console.log(err);
-        return res.status(500).json({
+        return res.json({
           success: 0,
-          message: "Database connection error",
+          message: 'User already exist!!!',
         });
       }
       return res.status(200).json({
         success: 1,
         data: results,
+        message: 'Registration successful!!!!',
       });
     });
   },
   getUserById: (req, res) => {
-    const id = req.params.id;
+    const id = req.user.id;
 
     getUserById(id, (err, result) => {
       if (err) {
@@ -39,12 +41,13 @@ module.exports = {
       if (!result) {
         return res.json({
           success: 0,
-          message: "Record not found!",
+          message: 'Record not found!',
         });
       }
       return res.json({
         success: 1,
         data: result,
+        message: 'Registration successful!!!',
       });
     });
   },
@@ -57,7 +60,7 @@ module.exports = {
       if (!result) {
         return res.json({
           success: 0,
-          message: "Records not found!",
+          message: 'Records not found!',
           data: result,
         });
       }
@@ -68,29 +71,50 @@ module.exports = {
     });
   },
   deleteUser: (req, res) => {
-    const { body } = req;
-    deleteUser(body, (err, result) => {
+    const { id } = req.user;
+    deleteUser(id, (err, result) => {
       if (err) {
         console.log(err);
         return;
       }
+      req.user = null;
       return res.json({
         success: 1,
-        data: "Profile Deleted successfully!!!",
+        data: 'Profile Deleted successfully!!!',
       });
     });
   },
   login: (req, res) => {
     const { email, password } = req.body;
-    getUserByEmail(email, (err, result) => {
+    getUserByEmail(email, (err, results) => {
       if (err) {
         console.log(err);
         return;
       }
-      if (!result.length) {
+      if (!results) {
         return res.json({
           success: 0,
-          message: "Invalid email/password",
+          message: 'Invalid email/password',
+        });
+      }
+      // console.log(password, results.password);
+
+      const result = compareSync(password, results.password);
+      if (result) {
+        const { password, ...userDetails } = results;
+        const jsontoken = sign({ result: userDetails }, 'qwe123', {
+          expiresIn: '12h',
+        });
+        return res.json({
+          success: 1,
+          message: 'logged in succssfully',
+          token: jsontoken,
+          user: userDetails,
+        });
+      } else {
+        return res.json({
+          success: 0,
+          message: 'Invalid email or password',
         });
       }
     });

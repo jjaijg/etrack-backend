@@ -1,4 +1,4 @@
-const pool = require("../../config/database");
+const { pool } = require('../../config/database');
 
 module.exports = {
   create: (data, callBack) => {
@@ -70,7 +70,7 @@ module.exports = {
     console.log(data);
     pool.query(
       `delete from registration where id = ?`,
-      [data.id],
+      [data],
 
       (err, results, fields) => {
         if (err) {
@@ -89,7 +89,7 @@ module.exports = {
         if (err) {
           return callBack(err);
         }
-        return callBack(null, results);
+        return callBack(null, results[0]);
       }
     );
   },
