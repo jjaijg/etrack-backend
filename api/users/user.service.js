@@ -1,96 +1,103 @@
-const { pool } = require('../../config/database');
+const { pool, pool1 } = require('../../config/database');
 
-module.exports = {
-  create: (data, callBack) => {
-    pool.query(
-      `insert into registration(firstname, lastname, gender, email, password, number) values(?,?,?,?,?,?)`,
-      [
-        data.firstName,
-        data.lastName,
-        data.gender,
-        data.email,
-        data.password,
-        data.number,
-      ],
-      (err, results, fields) => {
-        if (err) {
-          return callBack(err);
-        }
-        return callBack(null, results);
-      }
-    );
-  },
-  getUsers: (callBack) => {
-    pool.query(
-      `select * from registration`,
-      [],
+const ERR_MESSAGE = 'Internal server error, please try again!';
+const userService = {};
 
-      (err, results, fields) => {
-        if (err) {
-          return callBack(err);
-        }
-        return callBack(null, results);
-      }
+userService.getUserByIdService = async (id) => {
+  try {
+    const user = await pool1.query(
+      `select id, username, email, phone, createdAt, activated from profile where id = ?`,
+      [id]
     );
-  },
-  getUserById: (id, callBack) => {
-    pool.query(
-      `select * from registration where id = ?`,
-      [id],
-
-      (err, results, fields) => {
-        if (err) {
-          return callBack(err);
-        }
-        return callBack(null, results[0]);
-      }
-    );
-  },
-  updateUser: (data, callBack) => {
-    pool.query(
-      `update registration set firstname=?, lastname=?, gender=?, email=?, password=?, number=? where id=?`,
-      [
-        data.firstName,
-        data.lastName,
-        data.gender,
-        data.email,
-        data.password,
-        data.number,
-        data.id,
-      ],
-      (err, results, fields) => {
-        if (err) {
-          return callBack(err);
-        }
-        return callBack(null, results[0]);
-      }
-    );
-  },
-  deleteUser: (data, callBack) => {
-    console.log(data);
-    pool.query(
-      `delete from registration where id = ?`,
-      [data],
-
-      (err, results, fields) => {
-        if (err) {
-          return callBack(err);
-        }
-        return callBack(null, results[0]);
-      }
-    );
-  },
-  getUserByEmail: (email, callBack) => {
-    pool.query(
-      `select * from registration where email = ?`,
-      [email],
-
-      (err, results, fields) => {
-        if (err) {
-          return callBack(err);
-        }
-        return callBack(null, results[0]);
-      }
-    );
-  },
+    if (user.length) {
+      return user[0];
+    }
+    throw new Error('Error in gettting user details');
+  } catch (error) {
+    throw error;
+  }
 };
+
+userService.getUserByEmail = async (email) => {
+  try {
+    const user = await pool1.query(`select * from profile where email = ?`, [
+      email,
+    ]);
+    return user.length ? user[0] : null;
+  } catch (error) {
+    throw error;
+  }
+};
+
+userService.createUserService = async (data) => {
+  try {
+    const isUserAdded = await pool1.query(
+      `insert into profile(username, email, password, phone) values(?,?,?,?)`,
+      [data.username, data.email, data.password, data.phone]
+    );
+    if (isUserAdded.affectedRows) {
+      return await userService.getUserByIdService(isUserAdded.insertId);
+    } else {
+      throw new Error(ERR_MESSAGE);
+    }
+  } catch (error) {
+    throw error;
+  }
+};
+
+userService.getUsers = (callBack) => {
+  pool.query(
+    `select * from registration`,
+    [],
+
+    (err, results, fields) => {
+      if (err) {
+        return callBack(err);
+      }
+      return callBack(null, results);
+    }
+  );
+};
+
+userService.getUserById = (id, callBack) => {
+  pool.query(
+    `select * from profile where id = ?`,
+    [id],
+
+    (err, results, fields) => {
+      if (err) {
+        return callBack(err);
+      }
+      return callBack(null, results[0]);
+    }
+  );
+};
+
+userService.updateUser = async (user) => {
+  try {
+    const isUserUpdated = await pool1.query(
+      `update profile set username=?, phone=? where id=?`,
+      [user.username, user.phone, user.id]
+    );
+    return isUserUpdated;
+  } catch (error) {
+    throw error;
+  }
+};
+
+userService.deleteUser = (data, callBack) => {
+  console.log(data);
+  pool.query(
+    `delete from registration where id = ?`,
+    [data],
+
+    (err, results, fields) => {
+      if (err) {
+        return callBack(err);
+      }
+      return callBack(null, results[0]);
+    }
+  );
+};
+
+module.exports = userService;

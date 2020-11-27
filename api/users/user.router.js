@@ -1,18 +1,14 @@
-const {
-  createUser,
-  getUserById,
-  getUsers,
-  deleteUser,
-  login,
-} = require('./user.controller');
+const { createUser, login, updateUser } = require('./user.controller');
 const router = require('express').Router();
-const { checkToken } = require('../../auth/token_validation');
+const { verifyToken } = require('../../middlewares/auth');
+const badRequest = require('../../middlewares/404');
 
-router.get('/', checkToken, getUsers);
-router.get('/profile', checkToken, getUserById);
+// router.get('/', checkToken, getUsers);
+// router.get('/profile', checkToken, getUserById);
 router.post('/', createUser);
-// router.patch("/", createUser);
-router.delete('/', checkToken, deleteUser);
+router.put('/', verifyToken, updateUser);
+// router.delete('/', checkToken, deleteUser);
 router.post('/login', login);
+router.all('*', badRequest);
 
 module.exports = router;
