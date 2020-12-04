@@ -14,7 +14,7 @@ module.exports = {
       });
 
       const message = {
-        from: `Mtracker <${senderEmail}>`,
+        from: `Mtracker < ${senderEmail} >`,
         to,
         subject,
         text: subject,
@@ -28,9 +28,7 @@ module.exports = {
         ],
       };
 
-      transporter.sendMail(message, (e, info) => {
-        throw e;
-      });
+      transporter.sendMail(message, (e, info) => {});
     } catch (e) {
       // handle errors here
       console.log('mail error : ', e);

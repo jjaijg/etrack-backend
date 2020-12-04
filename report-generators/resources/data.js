@@ -12,10 +12,12 @@ reports.parseDailyReport = async () => {
 
     transactions.forEach((txn) => {
       const { email, ...txnData } = txn;
+      const fmtDate = new Date(txnData.tdate);
+      const tdate = `${fmtDate.getDate()}-${fmtDate.getMonth()}-${fmtDate.getFullYear()}`;
       if (email in dailyReportData) {
-        dailyReportData[email].push(txnData);
+        dailyReportData[email].push({ ...txnData, tdate });
       } else {
-        dailyReportData[email] = [txnData];
+        dailyReportData[email] = [{ ...txnData, tdate }];
       }
     });
 
