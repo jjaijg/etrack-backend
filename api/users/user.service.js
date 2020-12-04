@@ -59,18 +59,8 @@ userService.getUsers = (callBack) => {
   );
 };
 
-userService.getUserById = (id, callBack) => {
-  pool.query(
-    `select * from profile where id = ?`,
-    [id],
-
-    (err, results, fields) => {
-      if (err) {
-        return callBack(err);
-      }
-      return callBack(null, results[0]);
-    }
-  );
+userService.getUserById = (id) => {
+  pool1.query(`select * from profile where id = ?`, [id]);
 };
 
 userService.updateUser = async (user) => {
@@ -86,7 +76,6 @@ userService.updateUser = async (user) => {
 };
 
 userService.deleteUser = (data, callBack) => {
-  console.log(data);
   pool.query(
     `delete from registration where id = ?`,
     [data],

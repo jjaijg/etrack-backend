@@ -3,6 +3,7 @@ const router = require('express').Router();
 const {
   createCategory,
   updateCategory,
+  deleteCategory,
   getAllCategories,
   getCategoryById,
   getDefaultCategories,
@@ -18,6 +19,6 @@ router.get('/default', verifyToken, getDefaultCategories);
 router.get('/user', verifyToken, getUserCategories);
 router.get('/:id', verifyToken, getCategoryById);
 router.put('/:id', verifyToken, updateCategory);
-// router.delete('/:id', verifyToken, deleteCategory);
+router.delete('/:id', verifyToken, deleteCategory);
 router.all('*', badRequest);
 module.exports = router;

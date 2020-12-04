@@ -15,11 +15,11 @@ txnService.getTxnByIdService = async (id, uid) => {
 
 txnService.createTxnService = async (newTxn) => {
   try {
-    const { uid, cid, description, type, amount } = newTxn;
+    const { uid, cid, description, type, amount, tdate } = newTxn;
 
     const isTxnAdded = await pool1.query(
-      `insert into transaction(uid, cid, amount, type, description) values(?,?,?,?,?)`,
-      [uid, cid, amount, type, description]
+      `insert into transaction(uid, cid, amount, type, description, tdate) values(?,?,?,?,?,?)`,
+      [uid, cid, amount, type, description, tdate]
     );
     if (isTxnAdded.affectedRows) {
       const txn = await txnService.getTxnByIdService(isTxnAdded.insertId, uid);
@@ -40,11 +40,11 @@ txnService.createTxnService = async (newTxn) => {
 
 txnService.updateTxnService = async (id, updTxn) => {
   try {
-    const { uid, cid, type, description, amount } = updTxn;
+    const { uid, cid, type, description, amount, tdate } = updTxn;
 
     return await pool1.query(
-      `update transaction set cid=?, amount=?, type=?, description=?, updatedAt=CURRENT_TIMESTAMP() where id=? and uid=?`,
-      [cid, amount, type, description, id, uid]
+      `update transaction set cid=?, amount=?, type=?, description=?, updatedAt=CURRENT_TIMESTAMP(), tdate=? where id=? and uid=?`,
+      [cid, amount, type, description, tdate, id, uid]
     );
   } catch (error) {
     throw error;
@@ -64,7 +64,21 @@ txnService.deleteTxnService = async (id, uid) => {
 
 txnService.getTxnByUserService = async (uid) => {
   try {
-    return await pool1.query(`select * from transaction where uid=?`, [uid]);
+    return await pool1.query(
+      `select t.id, cid, amount, type, description, tdate, name from transaction as t inner join category as c on t.cid=c.id where t.uid=?`,
+      [uid]
+    );
+  } catch (error) {
+    throw error;
+  }
+};
+
+// For Report
+txnService._allReportTxnService = async () => {
+  try {
+    return await pool1.query(
+      `SELECT p.username, p.email, amount, type, c.name, description, t.tdate FROM transaction as t INNER JOIN category as c ON t.cid=c.id INNER JOIN profile as p on t.uid=p.id order by p.id, t.tdate DESC`
+    );
   } catch (error) {
     throw error;
   }

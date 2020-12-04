@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <mate charest="utf-8" />
+    <title>Daily Report - {{email}}!</title>
+  </head>
+  <body>
+    <h1>Transaction List</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Type</th>
+          <th>Done at</th>
+          <th>Dexcription</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each transactions}}
+        <tr>
+          <td>{{this.amount}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.type}}</td>
+          <td>{{this.tdate}}</td>
+          <td>{{this.description}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </body>
+</html>

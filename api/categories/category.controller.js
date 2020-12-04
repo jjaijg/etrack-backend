@@ -5,6 +5,7 @@ const {
   getCatByIdService,
   createCatService,
   updateCatService,
+  deleteCatService,
 } = require('./category.service');
 const { validateName } = require('../../utils/validator');
 const { createError } = require('../../utils/helpers');
@@ -47,7 +48,10 @@ catController.updateCategory = async (req, res, next) => {
       user,
     } = req;
 
-    validateName(name);
+    const { isValid, ...errProps } = validateName(name);
+    if (!isValid) {
+      throw createError(errProps);
+    }
 
     const updatedCategory = await updateCatService({ uid: user.id, name, id });
 
@@ -62,6 +66,30 @@ catController.updateCategory = async (req, res, next) => {
       statusCode: 500,
       status: 'fail',
       message: 'Error in updating the category, Please try again!',
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+catController.deleteCategory = async (req, res, next) => {
+  try {
+    const {
+      params: { id },
+      user,
+    } = req;
+
+    const isDeleted = await deleteCatService(id, user.id);
+
+    if (isDeleted.affectedRows) {
+      return res.status(201).json({
+        status: 'success',
+        message: `Category deleted succeffully!`,
+      });
+    }
+    throw createError({
+      statusCode: 500,
+      status: 'fail',
+      message: 'Error in deleting the category, Please try again!',
     });
   } catch (error) {
     next(error);

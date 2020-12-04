@@ -1,0 +1,678 @@
+[2020-11-30T09:31:32.115Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'user4' for key 'username'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T12:51:58.605Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T12:54:02.300Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T12:55:35.825Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T12:56:02.302Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T12:58:32.436Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T13:00:55.155Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T13:03:26.572Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T13:16:45.511Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T13:19:16.834Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T13:19:53.279Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T13:26:22.134Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-11-30T13:26:45.588Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-12-01T07:58:28.149Z] :: Error occured :: undefined 
+[2020-12-01T07:58:51.906Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-12-01T08:09:02.195Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'jaijg' for key 'username'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-12-01T08:09:12.616Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry '8610332512' for key 'phone'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:47:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-12-01T12:39:32.922Z] :: Error occured :: undefined 
+[2020-12-01T12:40:23.307Z] :: Error occured :: undefined 
+[2020-12-01T16:01:18.801Z] :: Error occured :: undefined 
+[2020-12-01T16:04:56.789Z] :: Error occured :: undefined 
+[2020-12-02T15:41:56.013Z] :: Error occured :: undefined 
+[2020-12-02T15:42:20.868Z] :: Error occured :: undefined 
+[2020-12-02T15:43:23.445Z] :: Error occured :: undefined 
+[2020-12-02T15:43:32.492Z] :: Error occured :: undefined 
+[2020-12-02T15:44:05.211Z] :: Error occured :: undefined 
+[2020-12-02T15:44:48.129Z] :: Error occured :: undefined 
+[2020-12-02T15:57:13.230Z] :: Error occured :: undefined 
+[2020-12-02T15:57:59.261Z] :: Error occured :: undefined 
+[2020-12-02T15:58:06.790Z] :: Error occured :: undefined 
+[2020-12-02T15:59:12.458Z] :: Error occured :: undefined 
+[2020-12-02T15:59:38.571Z] :: Error occured :: undefined 
+[2020-12-02T16:03:46.904Z] :: Error occured :: undefined 
+[2020-12-02T16:04:01.644Z] :: Error occured :: undefined 
+[2020-12-02T16:04:42.899Z] :: Error occured :: undefined 
+[2020-12-02T16:11:13.221Z] :: Error occured :: undefined 
+[2020-12-02T16:13:20.743Z] :: Error occured :: undefined 
+[2020-12-02T16:15:12.897Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:48:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-12-02T16:17:40.360Z] :: Error occured :: undefined 
+[2020-12-02T16:18:29.939Z] :: Error occured :: undefined 
+[2020-12-02T16:18:47.740Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry '8610332512' for key 'phone'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:48:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-12-02T16:19:23.678Z] :: Error occured :: undefined 
+[2020-12-02T16:19:39.767Z] :: Error occured :: undefined 
+[2020-12-02T16:27:34.202Z] :: Error occured :: undefined 
+[2020-12-02T16:27:45.479Z] :: Error occured :: undefined 
+[2020-12-02T16:36:42.008Z] :: Error occured :: undefined 
+[2020-12-02T16:45:00.833Z] :: Error occured :: undefined 
+[2020-12-02T16:45:16.716Z] :: Error occured :: undefined 
+[2020-12-02T16:45:55.569Z] :: Error occured :: undefined 
+[2020-12-02T16:47:07.705Z] :: Error occured :: undefined 
+[2020-12-02T16:51:37.542Z] :: Error occured :: undefined 
+[2020-12-02T16:51:45.960Z] :: Error occured :: undefined 
+[2020-12-02T17:09:15.244Z] :: Error occured :: undefined 
+[2020-12-02T17:12:14.163Z] :: Error occured :: undefined 
+[2020-12-02T17:13:14.038Z] :: Error occured :: undefined 
+[2020-12-02T17:14:46.883Z] :: Error occured :: undefined 
+[2020-12-02T17:16:01.557Z] :: Error occured :: undefined 
+[2020-12-02T17:16:46.462Z] :: Error occured :: undefined 
+[2020-12-02T17:17:22.256Z] :: Error occured :: undefined 
+[2020-12-02T17:18:38.540Z] :: Error occured :: undefined 
+[2020-12-02T17:21:47.143Z] :: Error occured :: undefined 
+[2020-12-02T17:24:14.160Z] :: Error occured :: undefined 
+[2020-12-02T17:25:00.002Z] :: Error occured :: undefined 
+[2020-12-02T17:27:05.692Z] :: Error occured :: undefined 
+[2020-12-02T17:27:36.862Z] :: Error occured :: undefined 
+[2020-12-02T17:28:33.326Z] :: Error occured :: undefined 
+[2020-12-02T17:28:59.997Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'jai1' for key 'username'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:48:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-12-02T17:29:05.310Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry 'virujai319@gmail.com' for key 'email'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:48:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-12-02T17:29:09.731Z] :: Error occured :: Error: ER_DUP_ENTRY: Duplicate entry '8610332512' for key 'phone'
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at userService.createUserService (D:\node\expapp\api\users\user.service.js:34:37)
+    at userController.createUser (D:\node\expapp\api\users\user.controller.js:48:24)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\node\expapp\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-12-02T17:33:16.827Z] :: Error occured :: undefined 
+[2020-12-02T17:34:21.022Z] :: Error occured :: undefined 
+[2020-12-02T17:34:41.605Z] :: Error occured :: undefined 
+[2020-12-02T17:35:54.479Z] :: Error occured :: undefined 
+[2020-12-02T17:37:19.367Z] :: Error occured :: undefined 
+[2020-12-02T17:37:37.020Z] :: Error occured :: undefined 
+[2020-12-02T17:41:11.079Z] :: Error occured :: undefined 
+[2020-12-02T17:43:11.010Z] :: Error occured :: undefined 
+[2020-12-02T17:44:58.594Z] :: Error occured :: undefined 
+[2020-12-02T17:52:25.142Z] :: Error occured :: undefined 
+[2020-12-02T17:52:31.290Z] :: Error occured :: undefined 
+[2020-12-02T17:52:50.192Z] :: Error occured :: undefined 
+[2020-12-02T17:55:27.771Z] :: Error occured :: undefined 
+[2020-12-02T17:55:32.055Z] :: Error occured :: undefined 
+[2020-12-03T02:33:24.210Z] :: Error occured :: undefined 
+[2020-12-03T02:34:40.452Z] :: Error occured :: undefined 
+[2020-12-03T02:39:25.478Z] :: Error occured :: undefined 
+[2020-12-03T02:46:54.313Z] :: Error occured :: undefined 
+[2020-12-03T02:49:59.766Z] :: Error occured :: undefined 
+[2020-12-03T02:52:34.783Z] :: Error occured :: Error: ER_BAD_NULL_ERROR: Column 'name' cannot be null
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at catService.createCatService (D:\node\expapp\api\categories\category.service.js:19:36)
+    at catController.createCategory (D:\node\expapp\api\categories\category.controller.js:23:31)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at D:\node\expapp\middlewares\auth.js:26:9
+    at D:\node\expapp\node_modules\jsonwebtoken\verify.js:223:12 
+[2020-12-03T03:02:21.391Z] :: Error occured :: undefined 
+[2020-12-03T03:02:39.472Z] :: Error occured :: undefined 
+[2020-12-03T03:03:15.146Z] :: Error occured :: undefined 
+[2020-12-03T03:03:25.454Z] :: Error occured :: undefined 
+[2020-12-03T03:05:27.238Z] :: Error occured :: undefined 
+[2020-12-03T03:05:51.511Z] :: Error occured :: undefined 
+[2020-12-03T03:06:37.546Z] :: Error occured :: undefined 
+[2020-12-03T03:06:49.719Z] :: Error occured :: undefined 
+[2020-12-03T03:07:07.811Z] :: Error occured :: undefined 
+[2020-12-03T03:07:19.149Z] :: Error occured :: undefined 
+[2020-12-03T03:08:04.688Z] :: Error occured :: undefined 
+[2020-12-03T03:08:08.047Z] :: Error occured :: undefined 
+[2020-12-03T03:09:11.585Z] :: Error occured :: undefined 
+[2020-12-03T03:10:04.915Z] :: Error occured :: undefined 
+[2020-12-03T03:10:20.857Z] :: Error occured :: undefined 
+[2020-12-03T03:11:29.952Z] :: Error occured :: undefined 
+[2020-12-03T03:11:47.914Z] :: Error occured :: undefined 
+[2020-12-03T03:12:18.643Z] :: Error occured :: undefined 
+[2020-12-03T03:12:20.771Z] :: Error occured :: undefined 
+[2020-12-03T03:12:30.729Z] :: Error occured :: undefined 
+[2020-12-03T03:13:57.782Z] :: Error occured :: undefined 
+[2020-12-03T03:14:07.732Z] :: Error occured :: undefined 
+[2020-12-03T03:14:27.804Z] :: Error occured :: undefined 
+[2020-12-03T03:16:12.919Z] :: Error occured :: undefined 
+[2020-12-03T03:22:42.841Z] :: Error occured :: undefined 
+[2020-12-03T03:45:29.882Z] :: Error occured :: Error: ER_NON_UNIQ_ERROR: Column 'id' in field list is ambiguous
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at txnService.getTxnByUserService (D:\node\expapp\api\transactions\transaction.service.js:67:24)
+    at txnController.getTxnByUser (D:\node\expapp\api\transactions\transaction.controller.js:115:28)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at D:\node\expapp\middlewares\auth.js:26:9
+    at D:\node\expapp\node_modules\jsonwebtoken\verify.js:223:12 
+[2020-12-03T03:46:02.307Z] :: Error occured :: undefined 
+[2020-12-03T11:29:23.226Z] :: Error occured :: undefined 
+[2020-12-03T11:48:35.612Z] :: Error occured :: undefined 
+[2020-12-03T11:49:10.713Z] :: Error occured :: undefined 
+[2020-12-03T11:49:31.143Z] :: Error occured :: undefined 
+[2020-12-03T11:52:07.126Z] :: Error occured :: undefined 
+[2020-12-03T12:31:51.431Z] :: Error occured :: undefined 
+[2020-12-03T12:35:27.967Z] :: Error occured :: undefined 
+[2020-12-03T12:35:35.975Z] :: Error occured :: undefined 
+[2020-12-03T12:35:39.782Z] :: Error occured :: undefined 
+[2020-12-03T12:57:01.387Z] :: Error occured :: undefined 
+[2020-12-03T13:01:04.131Z] :: Error occured :: undefined 
+[2020-12-03T13:24:17.323Z] :: Error occured :: undefined 
+[2020-12-03T13:24:38.695Z] :: Error occured :: undefined 
+[2020-12-03T13:26:39.381Z] :: Error occured :: undefined 
+[2020-12-03T13:29:34.086Z] :: Error occured :: undefined 
+[2020-12-03T13:30:16.157Z] :: Error occured :: undefined 
+[2020-12-03T13:30:26.161Z] :: Error occured :: undefined 
+[2020-12-03T13:30:54.508Z] :: Error occured :: undefined 
+[2020-12-03T13:31:37.523Z] :: Error occured :: undefined 
+[2020-12-03T13:31:51.407Z] :: Error occured :: undefined 
+[2020-12-03T13:32:26.195Z] :: Error occured :: undefined 
+[2020-12-03T23:31:18.112Z] :: Error occured :: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?)' at line 1
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at txnService.createTxnService (D:\node\expapp\api\transactions\transaction.service.js:20:36)
+    at txnController.createTxn (D:\node\expapp\api\transactions\transaction.controller.js:19:23)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at validateTransactionData (D:\node\expapp\middlewares\transaction.validator.js:31:5)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-12-03T23:31:51.101Z] :: Error occured :: Error: ER_BAD_NULL_ERROR: Column 'tdate' cannot be null
+    at Query.Sequence._packetToError (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\node\expapp\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\node\expapp\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\node\expapp\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\node\expapp\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Pool.query (D:\node\expapp\node_modules\mysql\lib\Pool.js:199:23)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at Pool.query (internal/util.js:296:12)
+    at txnService.createTxnService (D:\node\expapp\api\transactions\transaction.service.js:20:36)
+    at txnController.createTxn (D:\node\expapp\api\transactions\transaction.controller.js:19:23)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\node\expapp\node_modules\express\lib\router\route.js:137:13)
+    at validateTransactionData (D:\node\expapp\middlewares\transaction.validator.js:31:5)
+    at Layer.handle [as handle_request] (D:\node\expapp\node_modules\express\lib\router\layer.js:95:5) 
+[2020-12-04T01:56:51.834Z] :: Error occured :: undefined 
+[2020-12-04T01:56:57.515Z] :: Error occured :: undefined 
+[2020-12-04T01:58:17.345Z] :: Error occured :: undefined 
+[2020-12-04T01:58:48.403Z] :: Error occured :: undefined 
+[2020-12-04T01:59:04.278Z] :: Error occured :: undefined 
+[2020-12-04T01:59:12.342Z] :: Error occured :: undefined 
+[2020-12-04T02:01:34.406Z] :: Error occured :: undefined 
+[2020-12-04T02:01:50.245Z] :: Error occured :: undefined 
+[2020-12-04T02:02:13.046Z] :: Error occured :: undefined 
+[2020-12-04T02:03:57.501Z] :: Error occured :: undefined 
+[2020-12-04T02:05:46.500Z] :: Error occured :: undefined 
+[2020-12-04T02:06:31.667Z] :: Error occured :: undefined 
+[2020-12-04T02:06:44.157Z] :: Error occured :: undefined 
+[2020-12-04T02:07:10.874Z] :: Error occured :: undefined 

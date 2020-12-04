@@ -33,7 +33,6 @@ const _checkSqlError = (err) => {
 
 const errorLogger = async (err, _req, res, next) => {
   try {
-    console.log('Error message');
     const isSqlError = err.errno || err.sqlMessage ? _checkSqlError(err) : null;
     let errObj = isSqlError ? isSqlError : err;
 

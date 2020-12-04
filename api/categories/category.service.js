@@ -47,18 +47,14 @@ catService.updateCatService = async (data) => {
   }
 };
 
-catService.deleteCatService = async (data) => {
+catService.deleteCatService = async (id, uid) => {
   try {
-    const rows = await pool1.query(data.query, [data.cid, data.uid]);
-    console.log(rows);
-    return { ...rows };
+    return await pool1.query(`delete from category where id=? and uid=?`, [
+      id,
+      uid,
+    ]);
   } catch (error) {
-    console.log('Error : ', error);
-    return {
-      error: true,
-      sqlMessage: error.sqlMessage,
-      errno: error.errno,
-    };
+    throw error;
   }
 };
 

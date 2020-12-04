@@ -1,5 +1,3 @@
-const { compareSync } = require('bcryptjs');
-const { sign } = require('jsonwebtoken');
 const { createError, encryptData } = require('../../utils/helpers');
 const {
   validateName,
@@ -11,11 +9,8 @@ const { createToken, verifyPass } = require('../../utils/auth');
 
 const {
   createUserService,
-  getUsers,
-  getUserById,
-  updateUser,
-  deleteUser,
   getUserByEmail,
+  getUserByIdService,
 } = require('./user.service');
 const userService = require('./user.service');
 
@@ -54,7 +49,6 @@ userController.createUser = async (req, res, next) => {
       data: user,
     });
   } catch (error) {
-    console.log('user error : ', error);
     next(error);
   }
 };
@@ -105,8 +99,6 @@ userController.updateUser = async (req, res, next) => {
     userValidator(validateName, username);
     userValidator(validatePhone, phone);
 
-    console.log('user : ', username, user.username, phone, user.phone);
-
     if (username === user.username && phone.toString() === user.phone) {
       throw createError({
         ...errObj,
@@ -138,34 +130,37 @@ userController.updateUser = async (req, res, next) => {
   }
 };
 
+userController.getUserById = async (req, res, next) => {
+  try {
+    const id = req.user.id;
+
+    const user = await getUserByIdService(id);
+
+    if (user) {
+      return res.json({
+        status: 'success',
+        message: 'profile obtained successflly!',
+        data: user,
+      });
+    } else {
+      throw createError({
+        statusCode: 403,
+        status: 'fail',
+        message: 'Invalid token or token expired!',
+      });
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = userController;
 
 /*
 
-  getUserById: (req, res) => {
-    const id = req.user.id;
-
-    getUserById(id, (err, result) => {
-      if (err) {
-        console.log(err);
-      }
-      if (!result) {
-        return res.json({
-          success: 0,
-          message: 'Not Authorised!',
-        });
-      }
-      return res.json({
-        success: 1,
-        data: result,
-        message: 'Authentication successful!!!',
-      });
-    });
-  },
   getUsers: (req, res) => {
     getUsers((err, result) => {
       if (err) {
-        console.log(err);
         return;
       }
       if (!result) {
@@ -186,7 +181,6 @@ module.exports = userController;
     const { id } = req.user;
     deleteUser(id, (err, result) => {
       if (err) {
-        console.log(err);
         return;
       }
       req.user = null;

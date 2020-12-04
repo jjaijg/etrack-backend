@@ -12,7 +12,7 @@ const txnController = {};
 txnController.createTxn = async (req, res, next) => {
   try {
     const {
-      body: { cid, amount, type, description },
+      body: { cid, amount, type, description, tdate },
       user,
     } = req;
 
@@ -21,6 +21,7 @@ txnController.createTxn = async (req, res, next) => {
       amount,
       type: type.toLowerCase(),
       description,
+      tdate,
       uid: user.id,
     });
 
@@ -30,7 +31,6 @@ txnController.createTxn = async (req, res, next) => {
       data: txn,
     });
   } catch (error) {
-    console.log(error);
     next(error);
   }
 };
@@ -38,7 +38,7 @@ txnController.createTxn = async (req, res, next) => {
 txnController.updateTxn = async (req, res, next) => {
   try {
     const {
-      body: { cid, amount, type, description },
+      body: { cid, amount, type, description, tdate },
       params: { id },
       user,
     } = req;
@@ -48,12 +48,12 @@ txnController.updateTxn = async (req, res, next) => {
       amount,
       type,
       description,
+      tdate,
       uid: user.id,
     });
 
     if (isUpdated.changedRows) {
       const txnArray = await getTxnByIdService(id, user.id);
-      console.log('updated txn : ', isUpdated, txnArray);
 
       if (txnArray.length) {
         return res.json({
