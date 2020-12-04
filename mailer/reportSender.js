@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
-const defaultMailingList = 'virujai319@gmail.com';
-const senderEmail = 'demoappsaccjai319@gmail.com';
+const defaultMailingList = process.env.GMAIL_ID || 'Your mail id';
+const senderEmail = process.env.GMAIL_ID || 'Your mail id';
 const senderPassword = process.env.GMAIL_APP_PASS || 'gmail_app_password'; // gmail app password
 module.exports = {
   sendMail: async (subject, text, to = defaultMailingList, filePath) => {

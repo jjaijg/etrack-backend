@@ -10,7 +10,7 @@ const genPdf = async (email, transactions) => {
       border: '10mm',
       header: {
         height: '45mm',
-        contents: '<div style="text-align: center;">Author: Jai Ganesh</div>',
+        contents: '<div style="text-align: center;">Etracker-Report</div>',
       },
       footer: {
         height: '28mm',
