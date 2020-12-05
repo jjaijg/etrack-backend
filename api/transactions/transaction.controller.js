@@ -144,7 +144,7 @@ txnController.deleteTxn = async (req, res, next) => {
     if (isDeleted.affectedRows) {
       return res.json({
         status: 'success',
-        message: 'Transactions delted successfully!',
+        message: 'Transaction deleted successfully!',
       });
     } else {
       throw createError({
