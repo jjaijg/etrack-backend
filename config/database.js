@@ -18,7 +18,7 @@ const pool1 = createPool({
   password: process.env.DB_PASS,
   database: process.env.MYSQL_DB,
   connectionLimit: 10,
-  timezone: 'UTC',
+  timezone: process.env.DB_TZ || 'UTC',
 });
 
 pool1.query = util.promisify(pool1.query);

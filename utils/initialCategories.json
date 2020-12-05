@@ -1,0 +1,50 @@
+[
+  {
+    "name": "food"
+  },
+  {
+    "name": "entertainment"
+  },
+  {
+    "name": "movie"
+  },
+  {
+    "name": "snacks"
+  },
+  {
+    "name": "breakfast"
+  },
+  {
+    "name": "lunch"
+  },
+  {
+    "name": "dinner"
+  },
+  {
+    "name": "travel"
+  },
+  {
+    "name": "fruits"
+  },
+  {
+    "name": "rent"
+  },
+  {
+    "name": "gas"
+  },
+  {
+    "name": "electricity"
+  },
+  {
+    "name": "health"
+  },
+  {
+    "name": "tour"
+  },
+  {
+    "name": "dress"
+  },
+  {
+    "name": "others"
+  }
+]
