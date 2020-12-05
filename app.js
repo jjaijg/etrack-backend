@@ -1,7 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-var cors = require('cors');
+const cors = require('cors');
+const helmet = require('helmet');
 const port = process.env.PORT || 3000;
 const scheulers = require('./schedulers');
 
@@ -13,7 +14,7 @@ const txnRouter = require('./api/transactions/transaction.router');
 scheulers.dailyScheduler(process.env.DAILY_CRON);
 
 // App Middleware
-app.use(express.json(), cors());
+app.use(express.json(), cors(), helmet());
 app.use(require('./utils/requestLogger'));
 
 // App Router

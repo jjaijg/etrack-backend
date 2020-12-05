@@ -66,8 +66,19 @@ userService.getUserById = (id) => {
 userService.updateUser = async (user) => {
   try {
     const isUserUpdated = await pool1.query(
-      `update profile set username=?, phone=? where id=?`,
-      [user.username, user.phone, user.id]
+      `update profile set username=?, phone=?, email=? where id=?`,
+      [user.username, user.phone, user.email, user.id]
+    );
+    return isUserUpdated;
+  } catch (error) {
+    throw error;
+  }
+};
+userService.updateUserPass = async (id, password) => {
+  try {
+    const isUserUpdated = await pool1.query(
+      `update profile set password=? where id=?`,
+      [password, id]
     );
     return isUserUpdated;
   } catch (error) {

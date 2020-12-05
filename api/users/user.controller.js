@@ -105,7 +105,7 @@ userController.updateUser = async (req, res, next) => {
       });
     }
 
-    const userDetails = { id: user.id, username, phone };
+    const userDetails = { ...user, username, phone };
 
     const isUpdated = await userService.updateUser(userDetails);
 
@@ -125,6 +125,64 @@ userController.updateUser = async (req, res, next) => {
         message: 'Error in updating the details!, Please try again!',
       });
     }
+  } catch (error) {
+    next(error);
+  }
+};
+
+userController.changePassword = async (req, res, next) => {
+  try {
+    const {
+      user: { id, email },
+      body: { oldPassword, password },
+    } = req;
+
+    userValidator(validatePassword, password);
+
+    const user = await getUserByEmail(email);
+
+    if (user) {
+      if (verifyPass(oldPassword, user.password)) {
+        if (user.password === password) {
+          throw createError({
+            status: 'fail',
+            statusCode: 400,
+            message: 'Old password and New password are same!',
+          });
+        }
+
+        const isUpdated = await userService.updateUserPass(
+          id,
+          encryptData(password)
+        );
+        if (isUpdated.changedRows) {
+          // const { password: oldPass, activated, ...userDetails } = user;
+          // const token = createToken(userDetails);
+
+          return res.status(200).json({
+            status: 'success',
+            message: `Password updated successfully!!!`,
+          });
+        } else {
+          throw createError({
+            status: 'fail',
+            statusCode: 400,
+            message: 'Error in updating the password, please try again!',
+          });
+        }
+      } else {
+        throw createError({
+          status: 'fail',
+          statusCode: 400,
+          message: 'Old password is invalid!',
+        });
+      }
+    }
+    throw createError({
+      status: 'fail',
+      statusCode: 400,
+      message: 'Error in updating the password, please try again!!',
+    });
   } catch (error) {
     next(error);
   }

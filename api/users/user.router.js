@@ -2,6 +2,7 @@ const {
   createUser,
   login,
   updateUser,
+  changePassword,
   getUserById,
 } = require('./user.controller');
 const router = require('express').Router();
@@ -12,7 +13,7 @@ const badRequest = require('../../middlewares/404');
 router.get('/profile', verifyToken, getUserById);
 router.post('/', createUser);
 router.put('/', verifyToken, updateUser);
-// router.delete('/', checkToken, deleteUser);
+router.put('/changepassword', verifyToken, changePassword);
 router.post('/login', login);
 router.all('*', badRequest);
 
